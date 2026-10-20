@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #1b1f2a;
+  background: #f6f7fb;
+}
+
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.gallery {
+  width: 100%;
+  margin: 1.5rem auto;
+}
+
+.note {
+  color: #5b6475;
+  font-size: 0.9rem;
+}
+
+/*
+ * CSS customization (new in v2). The widget renders plain CSS with stable class names
+ * under a `.pgw` root class. Prefer a configuration parameter when one exists (see
+ * app/page.tsx), and use CSS for what the configuration doesn't reach.
+ *
+ * Always include `.pgw` in your selectors so they match the specificity of the widget's rules.
+ */
+
+/* A custom property on a descendant element: no !important needed. */
+.pgw .thumbnailItem--selected {
+  --thumb-sel-border: 3px solid #5b3df5;
+}
+
+/* Icon colors live on the SVG inside the button. */
+.pgw .navButton path {
+  fill: #ffffff;
+}
+
+/* Config-derived custom properties on the root are written as inline styles,
+   so overriding one from CSS requires !important. */
+.pgw.galleryWrapper {
+  --gw-loader-color: #5b3df5 !important;
+}
