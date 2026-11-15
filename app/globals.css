@@ -22,7 +22,7 @@ body {
 }
 
 /*
- * CSS customization (new in v2). The widget renders plain CSS with stable class names
+ * CSS customization. The widget renders plain CSS with stable class names
  * under a `.pgw` root class. Prefer a configuration parameter when one exists (see
  * app/page.tsx), and use CSS for what the configuration doesn't reach.
  *
