@@ -24,11 +24,19 @@ export default async function Page() {
     carouselLocation: 'bottom',
     transition: 'fade',
     // Values the configuration covers are best set here; see app/globals.css for CSS overrides.
-    radius: 12,
-    borderWidth: 1,
-    borderColor: '#d8dcea',
+    radius: 24,
+    borderWidth: 3,
+    borderColor: '#5b3df5',
     navigationButtonProps: { color: '#5b3df5', iconColor: '#ffffff', shape: 'round' },
-    thumbnailProps: { radius: 8, borderColor: '#d8dcea' },
+    thumbnailProps: {
+      width: 88,
+      height: 88,
+      radius: 16,
+      borderColor: '#c9bfff',
+      selectedBorderPosition: 'all',
+      selectedBorderColor: '#5b3df5',
+      selectedBorderWidth: 4,
+    },
     // Breakpoint overrides apply after hydration, so the server markup always
     // matches the first client render.
     viewportBreakpoints: [{ breakpoint: 640, carouselLocation: 'bottom', aspectRatio: '1:1' }],
@@ -49,8 +57,8 @@ export default async function Page() {
       </div>
 
       <p className="note">
-        Buttons, borders, and radii are set through configuration. The selected thumbnail and the
-        loader are styled in <code>app/globals.css</code> with CSS overrides.
+        Buttons, borders, radii, and thumbnails are set through configuration. The shadow, icon
+        color, and loader are styled in <code>app/globals.css</code> with CSS overrides.
       </p>
     </main>
   );
