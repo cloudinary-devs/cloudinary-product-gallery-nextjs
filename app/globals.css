@@ -29,9 +29,9 @@ body {
  * Always include `.pgw` in your selectors so they match the specificity of the widget's rules.
  */
 
-/* A custom property on a descendant element: no !important needed. */
-.pgw .thumbnailItem--selected {
-  --thumb-sel-border: 3px solid #5b3df5;
+/* A brand shadow on the main viewer: no configuration parameter covers it. */
+.pgw .carouselViewerWrapper {
+  box-shadow: 0 16px 40px rgb(91 61 245 / 25%);
 }
 
 /* Icon colors live on the SVG inside the button. */
@@ -40,7 +40,8 @@ body {
 }
 
 /* Config-derived custom properties on the root are written as inline styles,
-   so overriding one from CSS requires !important. */
+   so overriding one there requires !important. Set on a descendant element
+   (for example, .pgw .thumbnailItem), a custom property needs no !important. */
 .pgw.galleryWrapper {
   --gw-loader-color: #5b3df5 !important;
 }
